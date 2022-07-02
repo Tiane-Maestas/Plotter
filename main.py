@@ -13,10 +13,10 @@ def func_x(t):
 
 def main():
     """Main"""
-    plotter1 = Plotter()
-    plotter2 = Plotter()
-    plotter3 = Plotter()
-    plotter4 = Plotter()
+    plotter1 = Plotter(title="Plot Uno", xlabel="x-axis1", ylabel="y-axis1", color='g')
+    plotter2 = Plotter(title="Plot Dos", xlabel="X2", ylabel="2y")
+    plotter3 = Plotter(title="Plot 3", xlabel="3x", ylabel="Y3", color='y')
+    plotter4 = Plotter(title="Plot 4", xlabel="4-axe", ylabel="4 Why?", color='r')
 
     input("Start")
     
