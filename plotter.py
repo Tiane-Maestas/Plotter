@@ -61,17 +61,11 @@ class Plotter():
 
     def set_range(self, x_data, y_data):
         """Sets the visible range of the window"""
-        if(self.curr_max_x < x_data):
-            self.curr_max_x = x_data
+        self.curr_max_x = max(self.curr_max_x, x_data)
+        self.curr_max_y = max(self.curr_max_y, y_data)   
 
-        if(self.curr_max_y < y_data):
-            self.curr_max_y = y_data   
-
-        if(self.curr_min_x > x_data):
-            self.curr_min_x = x_data 
-
-        if(self.curr_min_y > y_data):
-            self.curr_min_y = y_data
+        self.curr_min_x = min(self.curr_min_x, x_data) 
+        self.curr_min_y = min(self.curr_min_y, y_data)
 
         self.main_plot.set_xlim(self.curr_min_x, self.curr_max_x)
         self.main_plot.set_ylim(self.curr_min_y, self.curr_max_y)
