@@ -25,10 +25,10 @@ def main():
     for time in numpy.arange(0, 6.9, 0.1):
         plotter_1.plot(func_x(time), func_y(time))
         plotter_2.plot(time, time)
-
+    
     for time in numpy.arange(0, 20, 0.1):
         plotter_3.plot(time + 69, time)
-
+    
     for time in numpy.arange(0, 20, 0.1):
         plotter_4.plot(time, -time)
     
